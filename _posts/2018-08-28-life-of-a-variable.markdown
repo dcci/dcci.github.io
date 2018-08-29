@@ -9,7 +9,7 @@ back facts starting from the final executable to the original source code.
 These informations are emitted by the compiler.
 Let's start with the simplest possible swift program as a pratical example.
 
-{% highlight ruby %}
+{% highlight swift %}
 $ cat example.swift
 func f() -> Int {
   let patatino = 23
@@ -23,7 +23,7 @@ target independent intermediate representation (SIL), which is the representatio
 on which the high-level swift optimizer likes to work on. As part of SIL generation,
 the frontend emits some informations useful for the debugger.
 
-{% highlight ruby %}
+{% highlight swift %}
 $ swiftc example.swift -g -emit-sil -o - -Xllvm -sil-print-debuginfo
 
 [...]
